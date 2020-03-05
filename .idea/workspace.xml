@@ -1,45 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="businessProject:war exploded" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="2132c52a-b328-40b0-ab19-1fceac08289b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/business/common/ResponseCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/business/common/ServletResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/business/controller/DepartmentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/business/filter/SetCookie.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/business/service/IDepartmentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/business/service/impl/DepartmentServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/business/vo/DepartmentAndEnergyVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/applicationContext-datasource.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/business/dao/EnergyMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/business/dao/EnergyMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/business/pojo/Business.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/business/pojo/Business.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/business/pojo/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/business/pojo/Department.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/business/pojo/Energy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/business/pojo/Energy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/business/pojo/UserWithBLOBs.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/datasource.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/datasource.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/BusinessMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/BusinessMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/DepartmentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/DepartmentMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/EnergyMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/EnergyMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/ManagerMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/ManagerMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/datasource.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/datasource.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../xiyouProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../xiyouProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/common/Const.class" beforeDir="false" afterPath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/common/Const.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/common/ResponseCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/common/ResponseCode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/common/ServletResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/common/ServletResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/common/TokenCache$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/common/TokenCache$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/common/TokenCache.class" beforeDir="false" afterPath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/common/TokenCache.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/controller/protal/CommentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/controller/protal/CommentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/controller/protal/MessageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/controller/protal/MessageController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/controller/protal/ReplyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/controller/protal/ReplyController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/controller/protal/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/controller/protal/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/dao/CommentMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/dao/CommentMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/dao/ContentMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/dao/ContentMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/dao/MessageMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/dao/MessageMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/dao/ReplyMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/dao/ReplyMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/dao/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/dao/UserMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/filter/SetCookie.class" beforeDir="false" afterPath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/filter/SetCookie.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/pojo/Comment.class" beforeDir="false" afterPath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/pojo/Comment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/pojo/Content.class" beforeDir="false" afterPath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/pojo/Content.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/pojo/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/pojo/Message.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/pojo/Reply.class" beforeDir="false" afterPath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/pojo/Reply.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/pojo/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/pojo/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/service/ICommentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/service/ICommentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/service/IFileService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/service/IFileService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/service/IMessageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/service/IMessageService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/service/IReplyService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/service/IReplyService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/service/IUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/service/IUserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/service/impl/CommentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/service/impl/CommentServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/service/impl/FileServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/service/impl/FileServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/service/impl/MessageServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/service/impl/MessageServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/service/impl/ReplyServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/service/impl/ReplyServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/service/impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/util/DateTimeUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/util/DateTimeUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/util/FTPUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/util/FTPUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/util/PropertiesUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/util/PropertiesUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/vo/MessageVo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/vo/MessageVo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/vo/UserMainPageVo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../xiyouProject/target/classes/com/xiyou/vo/UserMainPageVo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../xiyouProject/target/test-classes/META-INF/xiyouProject.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../xiyouProject/xiyouProject.iml" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,8 +41,37 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../xiyouProject" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -58,10 +81,15 @@
     </option>
   </component>
   <component name="ProjectId" id="1YemezsFIsHfquvKZgZxTr8MexE" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -73,11 +101,16 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.1541502" />
     <property name="project.structure.side.proportion" value="0.24649532" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.selected.configurable" value="spring" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\businessProject\src\main\webapp\WEB-INF" />
       <recent name="D:\businessProject\src\main\resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.business.common" />
+      <recent name="com.business.filter" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\xiyouProject\src\main\java\com\xiyou\service" />
@@ -95,6 +128,85 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="Tomcat 7.0.96" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.96" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="1.8" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/businessProject_war_exploded/" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="businessProject:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/businessProject_war_exploded" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_businessProject" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="61469" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="businessProject:war exploded" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="SpringGeneralSettings">
+    <option name="showMultipleContextsPanel" value="false" />
+    <option name="showProfilesPanel" value="false" />
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -107,6 +219,10 @@
       <updated>1583311533136</updated>
       <workItem from="1583311534911" duration="1010000" />
       <workItem from="1583312548928" duration="1864000" />
+      <workItem from="1583333874800" duration="3234000" />
+      <workItem from="1583394038924" duration="276000" />
+      <workItem from="1583405980821" duration="9539000" />
+      <workItem from="1583418866715" duration="3039000" />
     </task>
     <servers />
   </component>
@@ -125,5 +241,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

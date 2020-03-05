@@ -11,6 +11,8 @@ public interface EnergyMapper {
 
     Energy selectByPrimaryKey(Integer energyId);
 
+    Energy selectByName(String name);
+
     int updateByPrimaryKeySelective(Energy record);
 
     int updateByPrimaryKey(Energy record);

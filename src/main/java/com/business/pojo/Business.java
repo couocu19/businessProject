@@ -11,12 +11,23 @@ public class Business {
 
     private String type;
 
-    public Business(Integer businessId, Integer id, String businessName, String legalPersion, String type) {
+    private Integer userId;
+
+    public Business(Integer businessId, Integer id, String businessName, String legalPersion, String type, Integer userId) {
         this.businessId = businessId;
         this.id = id;
         this.businessName = businessName;
         this.legalPersion = legalPersion;
         this.type = type;
+        this.userId = userId;
+    }
+
+    public Integer getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Integer userId) {
+        this.userId = userId;
     }
 
     public Business() {
