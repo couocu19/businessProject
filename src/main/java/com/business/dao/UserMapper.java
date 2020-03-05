@@ -1,6 +1,7 @@
 package com.business.dao;
 
 import com.business.pojo.User;
+import org.apache.ibatis.annotations.Param;
 
 public interface UserMapper {
     int deleteByPrimaryKey(Integer id);
@@ -14,4 +15,8 @@ public interface UserMapper {
     int updateByPrimaryKeySelective(User record);
 
     int updateByPrimaryKey(User record);
+
+    int selectByAccountNumber(String accountNumber);
+
+    User checkUser(@Param("accountNumber") String accountNumber,@Param("password") String password);
 }

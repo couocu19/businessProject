@@ -2,6 +2,8 @@ package com.business.dao;
 
 import com.business.pojo.Energy;
 
+import java.util.List;
+
 public interface EnergyMapper {
     int deleteByPrimaryKey(Integer energyId);
 
@@ -14,4 +16,6 @@ public interface EnergyMapper {
     int updateByPrimaryKeySelective(Energy record);
 
     int updateByPrimaryKey(Energy record);
+
+    List<Energy> selectenergys();
 }

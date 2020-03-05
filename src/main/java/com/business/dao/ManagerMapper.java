@@ -1,6 +1,7 @@
 package com.business.dao;
 
 import com.business.pojo.Manager;
+import org.apache.ibatis.annotations.Param;
 
 public interface ManagerMapper {
     int deleteByPrimaryKey(Integer id);
@@ -14,4 +15,6 @@ public interface ManagerMapper {
     int updateByPrimaryKeySelective(Manager record);
 
     int updateByPrimaryKey(Manager record);
+
+    Manager checkManager(@Param("accountNumber") String accountNumber, @Param("password") String password);
 }

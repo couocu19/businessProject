@@ -2,6 +2,8 @@ package com.business.dao;
 
 import com.business.pojo.Business;
 
+import java.util.List;
+
 public interface BusinessMapper {
     int deleteByPrimaryKey(Integer businessId);
 
@@ -14,4 +16,6 @@ public interface BusinessMapper {
     int updateByPrimaryKeySelective(Business record);
 
     int updateByPrimaryKey(Business record);
+
+    List<Business> selectByUserId(Integer userId);
 }

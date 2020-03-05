@@ -7,10 +7,16 @@ public class Energy {
 
     private Double price;
 
-    public Energy(Integer energyId, String name, Double price) {
+    private Integer summation;
+
+    private Integer demand;
+
+    public Energy(Integer energyId, String name, Double price, Integer summation, Integer demand) {
         this.energyId = energyId;
         this.name = name;
         this.price = price;
+        this.summation = summation;
+        this.demand = demand;
     }
 
     public Energy() {
@@ -39,5 +45,21 @@ public class Energy {
 
     public void setPrice(Double price) {
         this.price = price;
+    }
+
+    public Integer getSummation() {
+        return summation;
+    }
+
+    public void setSummation(Integer summation) {
+        this.summation = summation;
+    }
+
+    public Integer getDemand() {
+        return demand;
+    }
+
+    public void setDemand(Integer demand) {
+        this.demand = demand;
     }
 }
