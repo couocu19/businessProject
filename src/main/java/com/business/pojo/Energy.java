@@ -7,16 +7,13 @@ public class Energy {
 
     private Double price;
 
-    private Integer summation;
+    private Integer count;
 
-    private Integer demand;
-
-    public Energy(Integer energyId, String name, Double price, Integer summation, Integer demand) {
+    public Energy(Integer energyId, String name, Double price, Integer count) {
         this.energyId = energyId;
         this.name = name;
         this.price = price;
-        this.summation = summation;
-        this.demand = demand;
+        this.count = count;
     }
 
     public Energy() {
@@ -47,19 +44,11 @@ public class Energy {
         this.price = price;
     }
 
-    public Integer getSummation() {
-        return summation;
+    public Integer getCount() {
+        return count;
     }
 
-    public void setSummation(Integer summation) {
-        this.summation = summation;
-    }
-
-    public Integer getDemand() {
-        return demand;
-    }
-
-    public void setDemand(Integer demand) {
-        this.demand = demand;
+    public void setCount(Integer count) {
+        this.count = count;
     }
 }

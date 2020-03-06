@@ -6,10 +6,14 @@
       <idArg column="id" javaType="java.lang.Integer" jdbcType="INTEGER" />
       <arg column="name" javaType="java.lang.String" jdbcType="VARCHAR" />
       <arg column="energy" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="energy_id" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="business_id" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="leader" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="energy_count" javaType="java.lang.Integer" jdbcType="INTEGER" />
     </constructor>
   </resultMap>
   <sql id="Base_Column_List">
-    id, name, energy
+    id, name, energy, energy_id, business_id, leader, energy_count
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
@@ -22,10 +26,12 @@
     where id = #{id,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="com.business.pojo.Department">
-    insert into department (id, name, energy
-      )
-    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{energy,jdbcType=VARCHAR}
-      )
+    insert into department (id, name, energy, 
+      energy_id, business_id, leader, 
+      energy_count)
+    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{energy,jdbcType=VARCHAR}, 
+      #{energyId,jdbcType=INTEGER}, #{businessId,jdbcType=INTEGER}, #{leader,jdbcType=VARCHAR}, 
+      #{energyCount,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="com.business.pojo.Department">
     insert into department
@@ -39,6 +45,18 @@
       <if test="energy != null">
         energy,
       </if>
+      <if test="energyId != null">
+        energy_id,
+      </if>
+      <if test="businessId != null">
+        business_id,
+      </if>
+      <if test="leader != null">
+        leader,
+      </if>
+      <if test="energyCount != null">
+        energy_count,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -49,6 +67,18 @@
       </if>
       <if test="energy != null">
         #{energy,jdbcType=VARCHAR},
+      </if>
+      <if test="energyId != null">
+        #{energyId,jdbcType=INTEGER},
+      </if>
+      <if test="businessId != null">
+        #{businessId,jdbcType=INTEGER},
+      </if>
+      <if test="leader != null">
+        #{leader,jdbcType=VARCHAR},
+      </if>
+      <if test="energyCount != null">
+        #{energyCount,jdbcType=INTEGER},
       </if>
     </trim>
   </insert>
@@ -61,13 +91,29 @@
       <if test="energy != null">
         energy = #{energy,jdbcType=VARCHAR},
       </if>
+      <if test="energyId != null">
+        energy_id = #{energyId,jdbcType=INTEGER},
+      </if>
+      <if test="businessId != null">
+        business_id = #{businessId,jdbcType=INTEGER},
+      </if>
+      <if test="leader != null">
+        leader = #{leader,jdbcType=VARCHAR},
+      </if>
+      <if test="energyCount != null">
+        energy_count = #{energyCount,jdbcType=INTEGER},
+      </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.business.pojo.Department">
     update department
     set name = #{name,jdbcType=VARCHAR},
-      energy = #{energy,jdbcType=VARCHAR}
+      energy = #{energy,jdbcType=VARCHAR},
+      energy_id = #{energyId,jdbcType=INTEGER},
+      business_id = #{businessId,jdbcType=INTEGER},
+      leader = #{leader,jdbcType=VARCHAR},
+      energy_count = #{energyCount,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>
 

@@ -23,9 +23,9 @@ public class AdminController {
     @RequestMapping("/login.action")
     public Map<String,Object> login(@RequestBody Manager manager, HttpServletRequest httpServletRequest){
         Map<String,Object> map = managerService.login(manager);
-        if ((Integer) map.get("code")==0){
+        if ((Integer) map.get("code")==0){ //登录成功将用户存入session域
             HttpSession session = httpServletRequest.getSession();
-            session.setAttribute("admin-info",manager);
+            session.setAttribute("admin-info",manager); //管理员信息存入session域
         }
         return map;
     }
@@ -34,12 +34,13 @@ public class AdminController {
     @RequestMapping("/addenergy.action")
     public Map<String,Object> addenergy(@RequestBody Energy energy, HttpSession session){
         Map<String,Object> map = new HashMap<>();
-       Manager manager = (Manager)session.getAttribute("admin-info");
-       if (manager==null){
+       Manager manager = (Manager)session.getAttribute("admin-info");//从session域中获取信息
+       if (manager==null){ //判断管理员是否登录
            map.put("code",1);
            map.put("error","管理员未登录");
        return map;
        }
+       //调用添加方法
         return managerService.addenergy(energy);
     }
 
@@ -56,7 +57,7 @@ public class AdminController {
         return managerService.updateenergy(energy);
     }
 
-    //管理员删除能源接口
+    //管理员根据能源编号删除能源接口
     @RequestMapping("/deleteenergy.action")
     public Map<String,Object> deleteenergy(@RequestBody Integer energyid, HttpSession session){
         Map<String,Object> map = new HashMap<>();
