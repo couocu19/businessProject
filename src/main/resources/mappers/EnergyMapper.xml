@@ -1,91 +1,96 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.business.dao.EnergyMapper">
-  <resultMap id="BaseResultMap" type="com.business.pojo.Energy">
-    <constructor>
-      <idArg column="energy_id" javaType="java.lang.Integer" jdbcType="INTEGER" />
-      <arg column="name" javaType="java.lang.String" jdbcType="VARCHAR" />
-      <arg column="price" javaType="java.lang.Double" jdbcType="DOUBLE" />
-      <arg column="count" javaType="java.lang.Integer" jdbcType="INTEGER" />
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.business.dao.EnergyMapper" >
+  <resultMap id="BaseResultMap" type="com.business.pojo.Energy" >
+    <constructor >
+      <idArg column="energy_id" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="name" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="price" jdbcType="DOUBLE" javaType="java.lang.Double" />
+      <arg column="count" jdbcType="INTEGER" javaType="java.lang.Integer" />
     </constructor>
   </resultMap>
-  <sql id="Base_Column_List">
-    energy_id, name, price, count
+  <sql id="Base_Column_List" >
+    energy_id, name, price,count
   </sql>
-  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
     <include refid="Base_Column_List" />
     from energy
     where energy_id = #{energyId,jdbcType=INTEGER}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from energy
     where energy_id = #{energyId,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.business.pojo.Energy">
-    insert into energy (energy_id, name, price, 
-      count)
-    values (#{energyId,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{price,jdbcType=DOUBLE}, 
-      #{count,jdbcType=INTEGER})
+  <insert id="insert" parameterType="com.business.pojo.Energy" >
+    insert into energy (energy_id, name, price,count
+      )
+    values (#{energyId,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{price,jdbcType=DOUBLE},#{count,jdbcType=INTEGER}
+      )
   </insert>
-  <insert id="insertSelective" parameterType="com.business.pojo.Energy">
+  <insert id="insertSelective" parameterType="com.business.pojo.Energy" >
     insert into energy
-    <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="energyId != null">
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="energyId != null" >
         energy_id,
       </if>
-      <if test="name != null">
+      <if test="name != null" >
         name,
       </if>
-      <if test="price != null">
+      <if test="price != null" >
         price,
       </if>
-      <if test="count != null">
+      <if test="count != null" >
         count,
       </if>
     </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="energyId != null">
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="energyId != null" >
         #{energyId,jdbcType=INTEGER},
       </if>
-      <if test="name != null">
+      <if test="name != null" >
         #{name,jdbcType=VARCHAR},
       </if>
-      <if test="price != null">
+      <if test="price != null" >
         #{price,jdbcType=DOUBLE},
       </if>
-      <if test="count != null">
+      <if test="count != null" >
         #{count,jdbcType=INTEGER},
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.business.pojo.Energy">
+  <update id="updateByPrimaryKeySelective" parameterType="com.business.pojo.Energy" >
     update energy
-    <set>
-      <if test="name != null">
+    <set >
+      <if test="name != null" >
         name = #{name,jdbcType=VARCHAR},
       </if>
-      <if test="price != null">
+      <if test="price != null" >
         price = #{price,jdbcType=DOUBLE},
       </if>
-      <if test="count != null">
-        count = #{count,jdbcType=INTEGER},
+      <if test="count != null" >
+        count = #{count,jdbcType=INTEGER}
       </if>
     </set>
     where energy_id = #{energyId,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.business.pojo.Energy">
+  <update id="updateByPrimaryKey" parameterType="com.business.pojo.Energy" >
     update energy
     set name = #{name,jdbcType=VARCHAR},
-      price = #{price,jdbcType=DOUBLE},
+      price = #{price,jdbcType=DOUBLE}
       count = #{count,jdbcType=INTEGER}
     where energy_id = #{energyId,jdbcType=INTEGER}
   </update>
 
-
-<select id="selectenergys" resultMap="BaseResultMap">
-  select
-  <include refid="Base_Column_List" />
-  from energy
-</select>
+  <select id="selectByName" parameterType="string" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from energy
+    where name = #{name}
+  </select>
+  <select id="selectenergys" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from energy
+  </select>
 </mapper>

@@ -1,74 +1,120 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.business.dao.DepartmentMapper">
-  <resultMap id="BaseResultMap" type="com.business.pojo.Department">
-    <constructor>
-      <idArg column="id" javaType="java.lang.Integer" jdbcType="INTEGER" />
-      <arg column="name" javaType="java.lang.String" jdbcType="VARCHAR" />
-      <arg column="energy" javaType="java.lang.String" jdbcType="VARCHAR" />
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.business.dao.DepartmentMapper" >
+  <resultMap id="BaseResultMap" type="com.business.pojo.Department" >
+    <constructor >
+      <idArg column="id" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="name" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="energy" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="energy_id" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="business_id" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="leader" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="energy_count" jdbcType="INTEGER" javaType="java.lang.Integer" />
+
     </constructor>
   </resultMap>
-  <sql id="Base_Column_List">
-    id, name, energy
+  <sql id="Base_Column_List" >
+    id, name, energy,energy_id,business_id,leader,energy_count
   </sql>
-  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
     <include refid="Base_Column_List" />
     from department
     where id = #{id,jdbcType=INTEGER}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from department
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.business.pojo.Department">
-    insert into department (id, name, energy
+  <insert id="insert" parameterType="com.business.pojo.Department" >
+    insert into department (id, name, energy,energy_id,business_id,leader,energy_count
       )
-    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{energy,jdbcType=VARCHAR}
+    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{energy,jdbcType=VARCHAR},#{energyId,jdbcType=INTEGER},#{businessId,jdbcType=INTEGER},
+    #{leader,jdbcType=VARCHAR}, #{name,jdbcType=INTEGER}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.business.pojo.Department">
+  <insert id="insertSelective" parameterType="com.business.pojo.Department" >
     insert into department
-    <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="id != null">
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
         id,
       </if>
-      <if test="name != null">
+      <if test="name != null" >
         name,
       </if>
-      <if test="energy != null">
+      <if test="energy != null" >
         energy,
       </if>
+      <if test="energy_id != null" >
+        energy_id,
+      </if>
+      <if test="business_id != null" >
+        business_id,
+      </if>
+      <if test="leader != null" >
+        leader,
+      </if>
+      <if test="energy_count != null" >
+        energy_count,
+      </if>
     </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="id != null">
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
         #{id,jdbcType=INTEGER},
       </if>
-      <if test="name != null">
+      <if test="name != null" >
         #{name,jdbcType=VARCHAR},
       </if>
-      <if test="energy != null">
+      <if test="energy != null" >
         #{energy,jdbcType=VARCHAR},
+      </if>
+      <if test="energy_id != null" >
+        #{energyId,jdbcType=INTEGER},
+      </if>
+      <if test="business_id != null" >
+        #{businessId,jdbcType=INTEGER},
+      </if>
+      <if test="leader != null" >
+        #{leader,jdbcType=VARCHAR},
+      </if>
+      <if test="energy_count != null" >
+        #{energyCount,jdbcType=INTEGER},
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.business.pojo.Department">
+  <update id="updateByPrimaryKeySelective" parameterType="com.business.pojo.Department" >
     update department
-    <set>
-      <if test="name != null">
+    <set >
+      <if test="name != null" >
         name = #{name,jdbcType=VARCHAR},
       </if>
-      <if test="energy != null">
+      <if test="energy != null" >
         energy = #{energy,jdbcType=VARCHAR},
       </if>
+      <if test="energy_id != null" >
+        energy_id = #{energyId,jdbcType=INTEGER},
+      </if>
+      <if test="business_id != null" >
+        #{businessId,jdbcType=INTEGER},
+      </if>
+      <if test="leader != null" >
+        #{leader,jdbcType=VARCHAR},
+      </if>
+      <if test="energy_count != null" >
+        #{energyCount,jdbcType=INTEGER},
+      </if>
+
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.business.pojo.Department">
+  <update id="updateByPrimaryKey" parameterType="com.business.pojo.Department" >
     update department
     set name = #{name,jdbcType=VARCHAR},
-      energy = #{energy,jdbcType=VARCHAR}
+      energy = #{energy,jdbcType=VARCHAR},
+      energy_id = #{energyId,jdbcType=INTEGER},
+      business_id = #{businessId,jdbcType=INTEGER},
+      leader = #{leader,jdbcType=VARCHAR},
+      energy_count = #{energyCount,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>
-
 </mapper>
