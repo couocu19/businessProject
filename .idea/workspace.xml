@@ -7,32 +7,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2132c52a-b328-40b0-ab19-1fceac08289b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/business/common/ResponseCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/business/common/ServletResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/business/controller/DepartmentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/business/filter/SetCookie.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/business/service/IDepartmentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/business/service/impl/DepartmentServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/business/vo/DepartmentAndEnergyVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/applicationContext-datasource.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/business/dao/EnergyMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/business/dao/EnergyMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/business/pojo/Business.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/business/pojo/Business.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/business/pojo/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/business/pojo/Department.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/business/pojo/Energy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/business/pojo/Energy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/business/pojo/UserWithBLOBs.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/datasource.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/datasource.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/BusinessMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/BusinessMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/DepartmentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/DepartmentMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/EnergyMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/EnergyMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/ManagerMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/ManagerMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/datasource.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/datasource.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/businessProject/WEB-INF/classes/com/business/dao/EnergyMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/businessProject/WEB-INF/classes/com/business/dao/EnergyMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/businessProject/WEB-INF/classes/com/business/pojo/Business.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/businessProject/WEB-INF/classes/com/business/pojo/Business.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/businessProject/WEB-INF/classes/com/business/pojo/Department.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/businessProject/WEB-INF/classes/com/business/pojo/Department.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/businessProject/WEB-INF/classes/com/business/pojo/Energy.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/businessProject/WEB-INF/classes/com/business/pojo/Energy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/businessProject/WEB-INF/classes/mappers/DepartmentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/businessProject/WEB-INF/classes/mappers/DepartmentMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/businessProject/WEB-INF/classes/mappers/EnergyMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/businessProject/WEB-INF/classes/mappers/EnergyMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/businessProject/WEB-INF/lib/jackson-databind-2.9.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/business/dao/EnergyMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/business/dao/EnergyMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/business/pojo/Business.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/business/pojo/Business.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/business/pojo/Department.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/business/pojo/Department.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/business/pojo/Energy.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/business/pojo/Energy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mappers/DepartmentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mappers/DepartmentMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mappers/EnergyMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mappers/EnergyMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../xiyouProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../xiyouProject/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -98,7 +87,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.1541502" />
     <property name="project.structure.side.proportion" value="0.24649532" />
     <property name="settings.editor.selected.configurable" value="spring" />
