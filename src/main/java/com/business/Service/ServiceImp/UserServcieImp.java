@@ -30,7 +30,6 @@ public class UserServcieImp implements UserService {
             map.put("error","密码为空");
             return map;
         }
-        //System.out.println("test.action");
         String password = MD5Util.MD5EncodeUtf8(user.getPassword(), Const.SALT);//MD5加密
         user.setPassword(password);
         // 数据库校验用户名密码

@@ -41,7 +41,7 @@ public class UserController {
         System.out.println(business.getBusinessName());
         User user = (User) session.getAttribute("user-info");
         Map<String ,Object> map =new HashMap<>();
-        if (user==null) {
+        if (user==null) {//判断用户是否登录
             map.put("code",1);
             map.put("error","用户未登录");
             return map;

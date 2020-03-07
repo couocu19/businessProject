@@ -30,7 +30,7 @@ public class ManagerServiceImp implements ManagerService {
             map.put("error","账号密码为空");
             return  map;
         }
-        String password = MD5Util.MD5EncodeUtf8(manager.getPassword(), Const.SALT);
+        String password = MD5Util.MD5EncodeUtf8(manager.getPassword(), Const.SALT);//MD5加密密码
         manager.setPassword(password);
         Manager checkmanager = managerMapper.checkManager(manager.getAccountNumber(),manager.getPassword());
         if (checkmanager==null){
@@ -60,7 +60,7 @@ public class ManagerServiceImp implements ManagerService {
     @Override
     public Map<String, Object> updateenergy(Energy energy) {
         Map<String,Object> map = new HashMap<>();
-        energyMapper.updateByPrimaryKeySelective(energy);
+        energyMapper.updateByPrimaryKeySelective(energy);//修改数据库中energy
         map.put("code",0);
         map.put("msg","ok");
         return map;
@@ -74,7 +74,7 @@ public class ManagerServiceImp implements ManagerService {
             map.put("error","参数错误");
             return map;
         }
-        energyMapper.deleteByPrimaryKey(energyid);
+        energyMapper.deleteByPrimaryKey(energyid);//根据能源编号删除
         map.put("code",0);
         map.put("msg","ok");
         return map;
@@ -82,7 +82,7 @@ public class ManagerServiceImp implements ManagerService {
 
     @Override
     public Map<String, Object> selectenergys() {
-        List<Energy> list = energyMapper.selectenergys();
+        List<Energy> list = energyMapper.selectenergys();//查询所有的能源信息
         Map<String,Object> map =new HashMap<>();
         map.put("code",0);
         map.put("msg","ok");
@@ -91,7 +91,7 @@ public class ManagerServiceImp implements ManagerService {
     }
 
     @Override
-    public Map<String, Object> selectenergy(Integer energyid) {
+    public Map<String, Object> selectenergy(Integer energyid) {//根据能源id查询信息
         Map<String,Object> map = new HashMap<>();
         if (energyid==null){
             map.put("code",1);

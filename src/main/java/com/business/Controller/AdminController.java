@@ -49,7 +49,7 @@ public class AdminController {
     public Map<String,Object> updateenergy(@RequestBody Energy energy, HttpSession session){
         Map<String,Object> map = new HashMap<>();
         Manager manager = (Manager)session.getAttribute("admin-info");
-        if (manager==null){
+        if (manager==null){//判断管理员是否登录
             map.put("code",1);
             map.put("error","管理员未登录");
             return map;
