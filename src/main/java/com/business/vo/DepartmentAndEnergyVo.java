@@ -11,6 +11,16 @@ public class DepartmentAndEnergyVo {
 
     private Integer count;
 
+    private Integer businessId;
+
+    public Integer getBusinessId() {
+        return businessId;
+    }
+
+    public void setBusinessId(Integer businessId) {
+        this.businessId = businessId;
+    }
+
     public Integer getCount() {
         return count;
     }
@@ -27,12 +37,13 @@ public class DepartmentAndEnergyVo {
         this.legalPerson = legalPerson;
     }
 
-    public DepartmentAndEnergyVo(String departName, String energyName, double energyPrice, String legalPerson, Integer count) {
+    public DepartmentAndEnergyVo(String departName, String energyName, double energyPrice, String legalPerson, Integer count, Integer businessId) {
         this.departName = departName;
         this.energyName = energyName;
         this.energyPrice = energyPrice;
         this.legalPerson = legalPerson;
         this.count = count;
+        this.businessId = businessId;
     }
 
     public DepartmentAndEnergyVo(){

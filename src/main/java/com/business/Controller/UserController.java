@@ -30,6 +30,7 @@ public class UserController {
         Map<String, Object> map = userService.login(user);
         if ((Integer) map.get("code")==0){   //登陆成功将用户信息存入session
             HttpSession session = httpServletRequest.getSession(); // 获取session
+            user.setId((Integer)map.get("result"));
             session.setAttribute("user-info",user); //将用户存入session
         }
      return  map;

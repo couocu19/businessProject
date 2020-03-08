@@ -12,6 +12,8 @@ import com.business.vo.DepartmentAndEnergyVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 
 @Service("iDepartmentService")
 public class DepartmentServiceImpl implements IDepartmentService {
@@ -25,34 +27,39 @@ public class DepartmentServiceImpl implements IDepartmentService {
     @Autowired
     private BusinessMapper businessMapper;
 
-    public ServletResponse<DepartmentAndEnergyVo> addDepart(String name,String energyName,Integer businessId,String leader,Integer count){
+    public ServletResponse<DepartmentAndEnergyVo> addDepart(Department department,Integer id){
 
-        Department department = new Department();
 
         //获取待添加能源的id和单价
-        Integer energyId = energyMapper.selectByName(energyName).getEnergyId();
+        String energyName = department.getEnergy();
+        System.out.println(energyName);
+        Energy energy = energyMapper.selectByName(energyName);
+        //判断能源是否存在
+        if(energy == null){
+            return ServletResponse.createByErrorMessage("您指定的能源不存在~");
+        }
         Double price = energyMapper.selectByName(energyName).getPrice();
         Integer allCount = energyMapper.selectByName(energyName).getCount();
 
-        if(count>allCount){
+        Integer energyId = energy.getEnergyId();
+        department.setEnergyId(energyId);
+        Integer count = department.getEnergyCount();
+
+        if(allCount==null||count>allCount){
             return ServletResponse.createByErrorMessage("能源总量不足~");
         }
 
         //获取管理该部门的企业的信息
-        Business business = businessMapper.selectByPrimaryKey(businessId);
-        if(business == null){
-            return ServletResponse.createByErrorMessage("找不到该部门~");
+        Business business = businessMapper.selectByPrimaryKey(department.getBusinessId());
+        if(business == null ){
+            return ServletResponse.createByErrorMessage("找不到该企业~");
         }
-
-
-        //填充部门的具体信息
-        department.setEnergy(energyName);
-        department.setName(name);
-        department.setEnergyId(energyId);
-        department.setBusinessId(businessId);
-        department.setLeader(leader);
-        department.setEnergyCount(count);
-
+        Integer userId = business.getUserId();
+        System.out.println(userId);
+        System.out.println(id);
+        if(userId!=id){
+            return ServletResponse.createByErrorMessage("您的名下没有该企业~");
+        }
         //将填好信息的部门添加到数据库中
         int rowCount = departmentMapper.insertSelective(department);
         if(rowCount>0){
@@ -71,6 +78,8 @@ public class DepartmentServiceImpl implements IDepartmentService {
         vo.setEnergyPrice(price);
         vo.setLegalPerson(department.getLeader());
         vo.setCount(department.getEnergyCount());
+        vo.setBusinessId(department.getBusinessId());
+
 
         return vo;
     }
@@ -117,6 +126,7 @@ public class DepartmentServiceImpl implements IDepartmentService {
         }
 
         int rowCount = departmentMapper.updateByPrimaryKeySelective(department);
+
         if(rowCount>0){
             Department department1 = departmentMapper.selectByPrimaryKey(id);
             Integer energyId = department1.getEnergyId();
@@ -133,11 +143,10 @@ public class DepartmentServiceImpl implements IDepartmentService {
     public ServletResponse<Department> getInfo(Integer id){
         Department department = departmentMapper.selectByPrimaryKey(id);
         if(department == null){
-            return ServletResponse.createByErrorMessage("无对应企业信息~");
+            return ServletResponse.createByErrorMessage("无对应部门信息~");
         }
         return ServletResponse.createBySuccess(department);
     }
-
 
     public ServletResponse<Energy> getEnergy(Integer id){
         Department department = departmentMapper.selectByPrimaryKey(id);
@@ -152,6 +161,15 @@ public class DepartmentServiceImpl implements IDepartmentService {
 
         return ServletResponse.createByErrorMessage("查找失败~");
 
+    }
+
+    @Override
+    public ServletResponse<List<Department>> getDepartments(Integer businessId) {
+        if (businessId==null) return ServletResponse.createByErrorMessage("参数错误");
+       List<Department> departments = departmentMapper.selectByDepartments(businessId);
+       if (departments==null||departments.size()==0)
+           return ServletResponse.createByErrorMessage("无部门信息");
+        return ServletResponse.createBySuccess("ok",departments);
     }
 
 }

@@ -92,6 +92,10 @@ public class UserServcieImp implements UserService {
     @Override
     public Map<String, Object> selectbusiness(Integer userId) {
         Map<String,Object> map =new HashMap<>();
+        if (userId==null){
+            map.put("code",1);
+            map.put("msg","参数错误");
+        }
        List<Business> businessList = businessMapper.selectByUserId(userId);
        map.put("code",0);
        map.put("msg","ok");
@@ -101,29 +105,31 @@ public class UserServcieImp implements UserService {
 
     @Override
     public Map<String, Object> updatebusiness(Business business) {
-        businessMapper.updateByPrimaryKeySelective(business);
         Map<String,Object> map =new HashMap<>();
+        if (business.getUserId()==null) {//参数校验
+            map.put("code",1);
+            map.put("msg","参数错误");
+        }
+        businessMapper.updateByPrimaryKeySelective(business);//根据企业编号修改企业
+
         map.put("code",0);
         map.put("msg","ok");
         return map;
     }
 
     @Override
-    public Map<String, Object> deletebusiness(Integer businessId, Integer userId) {
-        Business business = businessMapper.selectByPrimaryKey(businessId);
+    public Map<String, Object> deletebusiness(Integer businessId, Integer userId) {//删除企业必须是企业的创建者
+        Business business = businessMapper.selectByPrimaryKey(businessId);//根据企业id查询企业信息
         Map<String,Object> map = new HashMap<>();
-        if (business.getUserId()!=userId) {
+        if (business.getUserId()!=userId) {//校验操作用户是不是企业的创建者
             map.put("code",1);
             map.put("error","用户无权限");
             return  map;
         }
-        businessMapper.deleteByPrimaryKey(businessId);
+        businessMapper.deleteByPrimaryKey(businessId);//删除企业信息
         map.put("code",0);
         map.put("msg","ok");
         return  map;
     }
-    public static void main(String[] args) {
-        String salt="geelysdafaqj23ou89ZXcj@#$@#$#@KJdjklj;D../dSF.,";//加盐
-        System.out.println(MD5Util.MD5EncodeUtf8("admin",salt));
-    }
+
 }

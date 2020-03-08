@@ -18,5 +18,5 @@ public interface UserMapper {
 
     int selectByAccountNumber(String accountNumber);
 
-    User checkUser(@Param("accountNumber") String accountNumber,@Param("password") String password);
+    User checkUser(@Param("accountNumber") String accountNumber, @Param("password") String password);
 }

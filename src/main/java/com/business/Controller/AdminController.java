@@ -59,7 +59,7 @@ public class AdminController {
 
     //管理员根据能源编号删除能源接口
     @RequestMapping("/deleteenergy.action")
-    public Map<String,Object> deleteenergy(@RequestBody Integer energyid, HttpSession session){
+    public Map<String,Object> deleteenergy(Integer energyid, HttpSession session){
         Map<String,Object> map = new HashMap<>();
         Manager manager = (Manager)session.getAttribute("admin-info");
         if (manager==null){

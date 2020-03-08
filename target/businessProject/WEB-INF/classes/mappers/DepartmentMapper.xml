@@ -33,6 +33,8 @@
     #{leader,jdbcType=VARCHAR}, #{name,jdbcType=INTEGER}
       )
   </insert>
+
+
   <insert id="insertSelective" parameterType="com.business.pojo.Department" >
     insert into department
     <trim prefix="(" suffix=")" suffixOverrides="," >
@@ -45,16 +47,16 @@
       <if test="energy != null" >
         energy,
       </if>
-      <if test="energy_id != null" >
+      <if test="energyId != null" >
         energy_id,
       </if>
-      <if test="business_id != null" >
+      <if test="businessId != null" >
         business_id,
       </if>
       <if test="leader != null" >
         leader,
       </if>
-      <if test="energy_count != null" >
+      <if test="energyCount != null" >
         energy_count,
       </if>
     </trim>
@@ -68,20 +70,22 @@
       <if test="energy != null" >
         #{energy,jdbcType=VARCHAR},
       </if>
-      <if test="energy_id != null" >
+      <if test="energyId != null" >
         #{energyId,jdbcType=INTEGER},
       </if>
-      <if test="business_id != null" >
+      <if test="businessId != null" >
         #{businessId,jdbcType=INTEGER},
       </if>
       <if test="leader != null" >
         #{leader,jdbcType=VARCHAR},
       </if>
-      <if test="energy_count != null" >
+      <if test="energyCount != null" >
         #{energyCount,jdbcType=INTEGER},
       </if>
     </trim>
   </insert>
+
+
   <update id="updateByPrimaryKeySelective" parameterType="com.business.pojo.Department" >
     update department
     <set >
@@ -91,17 +95,17 @@
       <if test="energy != null" >
         energy = #{energy,jdbcType=VARCHAR},
       </if>
-      <if test="energy_id != null" >
+      <if test="energyId != null" >
         energy_id = #{energyId,jdbcType=INTEGER},
       </if>
-      <if test="business_id != null" >
-        #{businessId,jdbcType=INTEGER},
+      <if test="businessId != null" >
+       business_id =  #{businessId,jdbcType=INTEGER},
       </if>
       <if test="leader != null" >
-        #{leader,jdbcType=VARCHAR},
+       leader =  #{leader,jdbcType=VARCHAR},
       </if>
-      <if test="energy_count != null" >
-        #{energyCount,jdbcType=INTEGER},
+      <if test="energyCount != null" >
+        energy_count = #{energyCount,jdbcType=INTEGER},
       </if>
 
     </set>
@@ -117,4 +121,10 @@
       energy_count = #{energyCount,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>
+  <select id="selectByDepartments" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+    select
+    <include refid="Base_Column_List" />
+    from department
+    where business_id = #{businessId,jdbcType=INTEGER}
+  </select>
 </mapper>
