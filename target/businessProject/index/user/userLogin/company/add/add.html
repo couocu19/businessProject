@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="add.css"/>
+	</head>
+	<body>
+		<div class="wrapped">
+			<div class="container">
+				<div class="box">
+					<header class="mui-bar mui-bar-nav">
+						<h1 class="mui-title">添加企业信息</h1>
+					</header>
+					<div class="main">
+							<div>
+								用户编号：<input type="text" name="id" readonly="readonly" class="userId" value="" />
+							</div>
+							<div>
+								企业名称：<input type="text" name="name" maxlength="20" class="businessName" value="" />
+							</div>
+							<div>
+								企业类型：<input type="text"  class="businessType" value="" />
+							</div>
+							<div>
+								企业法人：<input type="text" name="legalPerson" class="legalPerson" value="" />
+							</div>
+					</div>
+				</div>
+				<button type="button" onclick="submit()">提交</button>
+			</div>
+		</div>
+		<script src="add.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

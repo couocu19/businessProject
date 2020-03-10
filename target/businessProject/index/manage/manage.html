@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="manage.css"/>
+	</head>
+	<body>
+		<div class="wrapped">
+			<div class="container">
+				<div class="box">
+					<header class="mui-bar mui-bar-nav">
+						<h1 class="mui-title">管理员登录</h1>
+					</header>
+					<div class="user">
+						用户：<input type="text" maxlength="20" name="user" value="" />
+					</div>
+					<div class="password">
+						密码：<input type="password" name="pass" maxlength="10" value="" />
+					</div>
+					<div class="code">
+						<input type="button" name="" id="checkCode" onclick="createCode()" value="" />
+						<input type="text" name="" id="input" value="" />
+					</div>
+					<div class="bottom">
+						<button type="button" onclick="validate()">登录</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="manage.js"></script>
+	</body>
+</html>

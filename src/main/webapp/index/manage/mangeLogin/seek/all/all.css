@@ -1,0 +1,28 @@
+*{
+	margin: 0;
+	padding: 0;
+	background-color: #F5F5F5;
+}
+
+.wrapped{
+	margin: 20px 0 0 0;
+}
+
+.container{
+	margin: 0 auto;
+	width: 320px;
+}
+
+.mui-title{
+	text-align: center;
+}
+
+table{
+	margin: 20px 0 20px 0;
+	line-height: 30px;
+	text-align: center;
+}
+
+th{
+	width: 150px;
+}

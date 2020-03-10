@@ -1,0 +1,44 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+html{
+	background-color: #f5f5f5;
+}
+
+.wrapped{
+	margin: 20px 0 0 0;
+}
+
+.container{
+	border: 1px solid #777777;
+	margin: 0 auto;
+	width: 320px;
+}
+
+.box{
+	margin: 20px 20px 20px 20px;
+}
+
+.mui-title{
+	text-align: center;
+}
+
+.main{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	margin: 20px 0 20px 50px;
+}
+
+.edit_form{
+	margin: 20px 20px 20px 20px;
+}
+
+button{
+	margin: 0 30px 20px 30px;
+	width: 80%;
+	cursor: pointer;
+}
